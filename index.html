@@ -1,1 +1,199 @@
+<!--
+  Blue & White Portfolio - single-file HTML
+  Instructions:
+  - Replace placeholders (NAME, TITLE, EMAIL, LINKS) with your real details.
+  - Save as index.html and open in browser.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Aravind G — Senior PHP Developer</title>
+  <meta name="description" content="Aravind G — Senior PHP Developer | Laravel, SuiteCRM, MySQL">
+  <style>
+    :root{
+      --bg:#ffffff;
+      --fg:#0a0a23;
+      --muted:#4b5563;
+      --accent:#007BFF;
+      --card:#f0f6ff;
+      --glass: rgba(0,123,255,0.08);
+      --radius:12px;
+      --maxwidth:1000px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--fg);background:var(--bg);-webkit-font-smoothing:antialiased}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--maxwidth);margin:32px auto;padding:24px}
 
+    /* Header / Hero */
+    .hero{display:flex;gap:24px;align-items:center}
+    .photo{flex:0 0 140px;height:140px;border-radius:50%;background:var(--card);display:grid;place-items:center;overflow:hidden;border:3px solid var(--accent)}
+    .photo svg{width:100%;height:100%;display:block}
+    .intro{flex:1}
+    .name{font-size:28px;font-weight:700;margin:0;color:var(--accent)}
+    .title{margin:6px 0;color:var(--muted)}
+    .cta{margin-top:12px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:8px;border:1px solid var(--accent);background:var(--accent);color:white;font-weight:600}
+    .btn:hover{background:#0056b3}
+
+    /* Layout */
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:24px;margin-top:28px}
+    @media(max-width:880px){.grid{grid-template-columns:1fr}.hero{flex-direction:row} .photo{width:110px;height:110px}}
+
+    /* Cards */
+    .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+    h2{margin:0 0 12px 0;font-size:18px;color:var(--accent)}
+
+    /* Skills */
+    .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .skill{padding:8px 0}
+    .skill .meta{display:flex;justify-content:space-between;font-size:13px;color:var(--muted)}
+    .bar{background:#e5e7eb;height:10px;border-radius:8px;overflow:hidden;margin-top:6px}
+    .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#66b2ff);}
+
+    /* Projects */
+    .project{margin-bottom:14px}
+    .project h3{margin:0;font-size:16px;color:var(--accent)}
+    .project p{margin:6px 0;color:var(--muted);font-size:14px}
+    .tech{font-size:13px;color:var(--muted)}
+
+    /* Sidebar */
+    .contact-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+    .contact-list li{font-size:14px;color:var(--muted)}
+
+    /* Footer */
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header class="hero">
+      <div class="photo">
+        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="120" height="120" fill="#dbeafe"/>
+          <g fill="#93c5fd">
+            <circle cx="60" cy="42" r="22" />
+            <rect x="18" y="75" width="84" height="24" rx="8" />
+          </g>
+        </svg>
+      </div>
+
+      <div class="intro">
+        <h1 class="name">Aravind G</h1>
+        <div class="title">Senior PHP Developer — Laravel | SuiteCRM | MySQL</div>
+        <p class="muted small">I build secure, scalable web applications and CRM solutions. I focus on clean backend architecture, reliable API integrations, and performance optimization.</p>
+        <div class="cta">
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn" style="margin-left:8px;background:white;color:var(--accent);border:1px solid var(--accent)" href="#projects">Projects</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid">
+
+      <div>
+        <section class="card" id="about">
+          <h2>About</h2>
+          <p class="small muted">Senior PHP Developer with expertise in Laravel, SuiteCRM, and custom web applications. Experienced in API integrations, database optimization, and delivering production-ready systems.</p>
+        </section>
+
+        <section class="card" style="margin-top:18px" id="skills">
+          <h2>Skills</h2>
+          <div class="skills">
+            <div>
+              <div class="skill">
+                <div class="meta"><span>PHP (Laravel)</span><span>90%</span></div>
+                <div class="bar"><i style="width:90%"></i></div>
+              </div>
+              <div class="skill">
+                <div class="meta"><span>SuiteCRM Customization</span><span>85%</span></div>
+                <div class="bar"><i style="width:85%"></i></div>
+              </div>
+              <div class="skill">
+                <div class="meta"><span>MySQL & Optimization</span><span>88%</span></div>
+                <div class="bar"><i style="width:88%"></i></div>
+              </div>
+            </div>
+            <div>
+              <div class="skill">
+                <div class="meta"><span>JavaScript & Ajax</span><span>75%</span></div>
+                <div class="bar"><i style="width:75%"></i></div>
+              </div>
+              <div class="skill">
+                <div class="meta"><span>API Integration</span><span>86%</span></div>
+                <div class="bar"><i style="width:86%"></i></div>
+              </div>
+              <div class="skill">
+                <div class="meta"><span>Git & Deployment</span><span>80%</span></div>
+                <div class="bar"><i style="width:80%"></i></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:18px" id="projects">
+          <h2>Selected Projects</h2>
+
+          <article class="project">
+            <h3>SuiteCRM Customization & Automation</h3>
+            <p>Customized modules for lead management, created document generation flows, and integrated external APIs for data synchronization.</p>
+            <div class="tech">PHP · SuiteCRM · MySQL · REST API · JavaScript</div>
+          </article>
+
+          <article class="project">
+            <h3>Job Portal</h3>
+            <p>Developed a job portal with role-based dashboards, dynamic search & filters, and resume management.</p>
+            <div class="tech">Laravel · MySQL · JavaScript · Bootstrap</div>
+          </article>
+
+          <article class="project">
+            <h3>Visitor Management System</h3>
+            <p>Built a secure visitor registration system with QR code entry, ID verification, and reporting dashboards.</p>
+            <div class="tech">Laravel · Ajax · MySQL · jQuery</div>
+          </article>
+
+          <article class="project">
+            <h3>API Integration & Automation</h3>
+            <p>Integrated payment and external CRM APIs; automated scheduled data imports & exports between systems.</p>
+            <div class="tech">PHP · cURL · JSON · REST</div>
+          </article>
+
+        </section>
+      </div>
+
+      <aside>
+        <div class="card" id="contact">
+          <h2>Contact</h2>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> <a href="mailto:aravindg@example.com">aravindg@example.com</a></li>
+            <li><strong>LinkedIn:</strong> <a href="#">linkedin.com/in/aravindg</a></li>
+            <li><strong>GitHub:</strong> <a href="#">github.com/aravindg</a></li>
+            <li class="small muted">Location: India</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <h2>Summary</h2>
+          <p class="small muted">I deliver maintainable code, optimize performance, and integrate systems to automate business workflows. Open to remote and on-site roles.</p>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <h2>Download</h2>
+          <p class="small muted">Resume: <a href="#">Download PDF</a></p>
+        </div>
+      </aside>
+
+    </main>
+
+    <footer>
+      <div class="small muted">© 2025 Aravind G • Senior PHP Developer — Crafted in Blue & White</div>
+    </footer>
+
+  </div>
+</body>
+</html>
+  
